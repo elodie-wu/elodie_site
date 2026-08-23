@@ -18,7 +18,7 @@ export function SiteLayout() {
   const lastWheelNavigation = useRef(0)
   const [routeTransition, setRouteTransition] = useState<'up' | 'down' | null>(null)
   const isFullScene = sceneRoutes.includes(location.pathname as (typeof sceneRoutes)[number])
-  const assetBase = `${import.meta.env.BASE_URL}assets/home/`
+  const assetBase = `${window.location.pathname}assets/home/`
 
   useEffect(() => {
     if (!isFullScene) return

@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 
 export function HomePage() {
-  const assetBase = `${import.meta.env.BASE_URL}assets/home/`;
+  const assetBase = `${window.location.pathname}assets/home/`;
 
   return (
     <section

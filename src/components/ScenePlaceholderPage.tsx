@@ -11,7 +11,7 @@ export function ScenePlaceholderPage({
   pageName,
   bottomFade = false,
 }: ScenePlaceholderPageProps) {
-  const assetBase = `${import.meta.env.BASE_URL}assets/pages/`
+  const assetBase = `${window.location.pathname}assets/pages/`
 
   return (
     <section

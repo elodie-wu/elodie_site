@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react'
 import { ShellStackGame } from '../features/shell-stack/ShellStackGame'
 
 export function PlayPage() {
-  const assetBase = `${import.meta.env.BASE_URL}assets/pages/`
+  const assetBase = `${window.location.pathname}assets/pages/`
 
   return (
     <section
