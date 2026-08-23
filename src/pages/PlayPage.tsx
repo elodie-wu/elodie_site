@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { ShellStackGame } from '../features/shell-stack/ShellStackGame'
+import { SnakeGame } from '../features/snake/SnakeGame'
 
 export function PlayPage() {
   const assetBase = `${window.location.pathname}assets/pages/`
@@ -11,7 +11,7 @@ export function PlayPage() {
       style={{ '--scene-background': `url("${assetBase}play-bg.png")` } as CSSProperties}
     >
       <div className="play-game-panel">
-        <ShellStackGame />
+        <SnakeGame />
       </div>
     </section>
   )
