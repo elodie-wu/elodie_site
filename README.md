@@ -33,11 +33,11 @@ This site is a place for my portfolio, experiments, notes, and a small cyberpunk
 
 ## Notes
 
-V1 is a static frontend project.  
+V1 is a static frontend project.\
 Backend, database, authentication, admin dashboard, and online leaderboard are planned for later versions.
 
 Built by one human and several very opinionated AI agents.
 
 ## Custom domain
 
-Production is configured for `https://elodiewu.com`. See [DOMAIN_SETUP.md](./DOMAIN_SETUP.md) for the GitHub Pages and DNS steps.
+Production is configured for `https://elodiewu.com`.
