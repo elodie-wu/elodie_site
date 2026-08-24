@@ -47,6 +47,20 @@ const oppositeDirections: Record<Direction, Direction> = {
   right: 'left',
 }
 
+const clockwiseTurns: Record<Direction, Direction> = {
+  up: 'right',
+  right: 'down',
+  down: 'left',
+  left: 'up',
+}
+
+const counterClockwiseTurns: Record<Direction, Direction> = {
+  up: 'left',
+  left: 'down',
+  down: 'right',
+  right: 'up',
+}
+
 const keyDirections: Record<string, Direction | undefined> = {
   ArrowUp: 'up',
   w: 'up',
@@ -91,6 +105,18 @@ function createFood(snake: readonly Point[]): Food {
 
 function isSamePoint(first: Point, second: Point): boolean {
   return first.x === second.x && first.y === second.y
+}
+
+function movePoint(point: Point, direction: Direction): Point {
+  const movement = directionVectors[direction]
+  return {
+    x: point.x + movement.x,
+    y: point.y + movement.y,
+  }
+}
+
+function isOutsideBoard(point: Point): boolean {
+  return point.x < 0 || point.x >= BOARD_SIZE || point.y < 0 || point.y >= BOARD_SIZE
 }
 
 export function SnakeGame() {
@@ -160,23 +186,36 @@ export function SnakeGame() {
 
   const moveSnake = useCallback(() => {
     const currentSnake = snakeRef.current
-    const nextDirection = queuedDirectionRef.current
-    const movement = directionVectors[nextDirection]
     const currentHead = currentSnake[0]
-    const nextHead = {
-      x: currentHead.x + movement.x,
-      y: currentHead.y + movement.y,
+    let nextDirection = queuedDirectionRef.current
+    let nextHead = movePoint(currentHead, nextDirection)
+
+    if (isOutsideBoard(nextHead)) {
+      const wallTurns = [clockwiseTurns[nextDirection], counterClockwiseTurns[nextDirection]]
+      const safeTurn = wallTurns.find((turnDirection) => {
+        const candidateHead = movePoint(currentHead, turnDirection)
+        if (isOutsideBoard(candidateHead)) return false
+        const candidateAteFood = isSamePoint(candidateHead, foodRef.current)
+        const candidateBody = candidateAteFood ? currentSnake : currentSnake.slice(0, -1)
+        return !candidateBody.some((segment) => isSamePoint(segment, candidateHead))
+      })
+
+      if (!safeTurn) {
+        updateStatus('game-over')
+        return
+      }
+
+      nextDirection = safeTurn
+      nextHead = movePoint(currentHead, nextDirection)
+      queuedDirectionRef.current = nextDirection
+      setDirection(nextDirection)
     }
+
     const ateFood = isSamePoint(nextHead, foodRef.current)
     const bodyToCheck = ateFood ? currentSnake : currentSnake.slice(0, -1)
-    const hitWall =
-      nextHead.x < 0 ||
-      nextHead.x >= BOARD_SIZE ||
-      nextHead.y < 0 ||
-      nextHead.y >= BOARD_SIZE
     const hitSnake = bodyToCheck.some((segment) => isSamePoint(segment, nextHead))
 
-    if (hitWall || hitSnake) {
+    if (hitSnake) {
       updateStatus('game-over')
       return
     }
@@ -361,7 +400,7 @@ export function SnakeGame() {
             <ol>
               <li>Collect the random emoji food.</li>
               <li>Each snack grows the pink snake.</li>
-              <li>Avoid the walls and your own trail.</li>
+              <li>Walls turn the snake; avoid your own trail.</li>
             </ol>
           </div>
         </aside>
