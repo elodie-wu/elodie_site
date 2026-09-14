@@ -56,6 +56,22 @@ export function SiteLayout() {
       if (Math.abs(event.deltaY) < 4 || Date.now() - lastWheelNavigation.current < 720) return
 
       const direction = event.deltaY > 0 ? 1 : -1
+      const scrollingElement = document.scrollingElement
+      const scrollTop = scrollingElement?.scrollTop ?? window.scrollY
+      const maxScrollTop = Math.max(
+        0,
+        (scrollingElement?.scrollHeight ?? document.documentElement.scrollHeight) - window.innerHeight,
+      )
+      const edgeTolerance = 4
+
+      if (
+        (direction > 0 && scrollTop < maxScrollTop - edgeTolerance) ||
+        (direction < 0 && scrollTop > edgeTolerance)
+      ) {
+        resetWheelDistance()
+        return
+      }
+
       if (wheelDirection.current !== 0 && wheelDirection.current !== direction) {
         wheelDistance.current = 0
       }
