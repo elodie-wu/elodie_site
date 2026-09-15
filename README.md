@@ -2,7 +2,7 @@
 
 My personal corner of the internet — a cyberpunk tavern for projects, experiments, notes, and small games.
 
-[Visit the website](https://elodiewu.com) · [GitHub](https://github.com/elodie-wu) · [LinkedIn](https://www.linkedin.com/in/elodie-wu)
+[Visit the website](https://elodiewu.com)
 
 ## Current Features
 
