@@ -3460,6 +3460,8 @@ a {
 
 .landing-home {
   --landing-background: none;
+  --home-background-brightness: 1.4;
+  --home-background-saturation: 1.08;
   isolation: isolate;
   position: relative;
   min-height: 100vh;
@@ -3499,6 +3501,8 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  filter: brightness(var(--home-background-brightness))
+    saturate(var(--home-background-saturation));
 }
 
 .landing-rain {
