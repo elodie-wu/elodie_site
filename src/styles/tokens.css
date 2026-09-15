@@ -1,0 +1,27 @@
+/* Shared design values. Page-specific knobs belong to that page's CSS. */
+@font-face {
+  font-family: 'SonyCam Original';
+  src: url('../assets/fonts/sonycam-original.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-pixel: 'SonyCam Original', 'Cascadia Mono', 'Lucida Console', 'Courier New', monospace;
+  --font-sans: var(--font-pixel);
+  --font-mono: var(--font-pixel);
+  --color-ink: #07090f;
+  --color-panel: #10131d;
+  --color-text: #f8fbff;
+  --color-cyan: #63f5ff;
+  --color-magenta: #8d2889;
+  --color-violet: #a78bfa;
+  --color-neon-pink: #d94fc9;
+  --color-soft-pink: #f3d4ef;
+  --color-blue: #42a3c1;
+  --color-cyan-rgb: 99, 245, 255;
+  --color-magenta-rgb: 141, 40, 137;
+  --color-neon-pink-rgb: 217, 79, 201;
+  --color-blue-rgb: 66, 163, 193;
+}

@@ -1,0 +1,30 @@
+.play-scene-page {
+  overflow: visible;
+  padding-top: clamp(108px, 13vh, 146px);
+  background-attachment: fixed;
+}
+
+.play-game-panel {
+  width: min(100%, 1220px);
+  padding: clamp(9px, 1.6vw, 18px);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(15px) saturate(0.85);
+  box-shadow:
+    inset 0 0 34px rgba(255, 255, 255, 0.1),
+    0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 700px) {
+
+  .play-scene-page {
+    padding: 94px 8px 24px;
+    background-attachment: scroll;
+  }
+
+  .play-game-panel {
+    padding: 6px;
+    border-radius: 18px;
+  }
+}

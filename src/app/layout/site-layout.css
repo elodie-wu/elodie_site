@@ -1,0 +1,123 @@
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  color: #071014;
+  background: var(--color-cyan);
+  font: 700 11px var(--font-mono);
+  transform: translateY(-160%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.site-layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background: var(--color-ink);
+  color: #fff;
+}
+.site-layout::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(var(--color-cyan-rgb), 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-cyan-rgb), 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.22) 0.55px,
+    transparent 0.55px
+  );
+  background-size: 5px 5px;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.site-footer {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #687183;
+  font: 9px var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.system-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.system-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+}
+
+@media (max-width: 560px) {
+  .page-shell,
+  .site-footer {
+    width: min(100% - 28px, 1180px);
+  }
+  .site-footer {
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px 0;
+    flex-direction: column;
+  }
+}
+.route-stage {
+  /* Keep backdrop-filter outside an opacity/transform compositing layer. */
+  position: relative;
+  top: 0;
+  transition: top 170ms cubic-bezier(0.32, 0.02, 0.58, 1);
+}
+
+.route-stage-exiting-down {
+  top: -13px;
+}
+.route-stage-exiting-up {
+  top: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-stage {
+    transition: none;
+  }
+  .route-stage-exiting-down,
+  .route-stage-exiting-up {
+    top: 0;
+  }
+}

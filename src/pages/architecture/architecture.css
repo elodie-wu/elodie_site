@@ -1,0 +1,130 @@
+.inner-page {
+  min-height: calc(100vh - 160px);
+  padding: 58px 0 90px;
+}
+.system-map {
+  margin-top: 38px;
+  padding: clamp(25px, 5vw, 52px);
+  border: 1px solid rgba(var(--color-cyan-rgb), 0.14);
+  background: rgba(16, 19, 29, 0.42);
+}
+.system-tier {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.future-tier {
+  grid-template-columns: repeat(2, 1fr);
+  width: 68%;
+  margin: 0 auto;
+}
+.system-node {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  min-height: 118px;
+  padding: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: #0d1018;
+}
+.system-node::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  top: -1px;
+  left: 12px;
+  background: var(--color-cyan);
+  box-shadow: 0 0 7px var(--color-cyan);
+}
+.node-wide {
+  width: 42%;
+  margin: 0 auto;
+}
+.system-node span {
+  color: #667082;
+  font: 8px var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.system-node strong {
+  color: #e6ebf2;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.system-node small {
+  color: #7f899b;
+  font: 9px var(--font-mono);
+}
+.system-flow {
+  width: 1px;
+  height: 48px;
+  margin: 0 auto;
+  background: rgba(var(--color-cyan-rgb), 0.25);
+}
+.system-flow i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+  transform: translate(-2px, 22px) rotate(45deg);
+}
+.system-caption {
+  margin: 38px 0 0;
+  text-align: center;
+  color: #687183;
+  font: 9px var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.decision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 38px;
+}
+.decision-grid article {
+  padding: 25px;
+  border-top: 1px solid rgba(167, 139, 250, 0.38);
+  background: rgba(255, 255, 255, 0.018);
+}
+.decision-grid span {
+  color: var(--color-violet);
+  font: 8px var(--font-mono);
+  letter-spacing: 0.1em;
+}
+.decision-grid h2 {
+  margin: 20px 0 10px;
+  font-size: 1.15rem;
+}
+.decision-grid p {
+  margin: 0;
+  color: #7f899b;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .decision-grid {
+    grid-template-columns: 1fr;
+  }
+  .future-tier {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .inner-page {
+    padding-top: 42px;
+  }
+  .system-tier,
+.future-tier {
+    grid-template-columns: 1fr;
+  }
+  .node-wide {
+    width: 100%;
+  }
+}

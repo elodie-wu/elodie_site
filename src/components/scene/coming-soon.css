@@ -1,0 +1,41 @@
+.scene-placeholder {
+  width: min(92vw, 600px);
+  min-height: clamp(118px, 18vw, 170px);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 15px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  color: #fff;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px) saturate(0.9);
+  box-shadow:
+    inset 0 0 32px rgba(255, 255, 255, 0.09),
+    0 15px 55px rgba(0, 0, 0, 0.34);
+}
+
+.scene-placeholder span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scene-placeholder strong {
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.72);
+}
+
+@media (max-width: 700px) {
+
+  .scene-placeholder {
+    width: min(100%, 520px);
+    min-height: 120px;
+    border-radius: 18px;
+  }
+}
