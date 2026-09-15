@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { scenePaths } from '../../config/site'
+import { useBackgroundPrefetch } from './useBackgroundPrefetch'
 import {
   adjacentScenePath, isAtScrollEdge, sceneNavigationTiming,
   type SceneDirection,
@@ -13,6 +14,7 @@ export function useSceneNavigation() {
   const lastNavigation = useRef(0)
   const [transition, setTransition] = useState<SceneDirection | null>(null)
   const isScene = scenePaths.includes(pathname)
+  useBackgroundPrefetch(pathname)
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })

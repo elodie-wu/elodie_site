@@ -53,6 +53,11 @@ for (const file of sourceFiles) {
   if (!visited.has(file)) failures.push('Unreferenced source file: ' + display(file))
 }
 const config = fs.readFileSync('src/config/site.ts', 'utf8')
+const homeBackground = config.match(/\bhome:\s*['"]([^'"]+)['"]/)?.[1]
+const html = fs.readFileSync('index.html', 'utf8')
+if (!homeBackground || !html.includes(`href="./${homeBackground}"`)) {
+  failures.push('Homepage preload and configured background do not match')
+}
 for (const match of config.matchAll(/['"](assets\/[^'"]+)['"]/g)) {
   if (!fs.existsSync(path.resolve('public', match[1]))) failures.push('Missing public asset: ' + match[1])
 }

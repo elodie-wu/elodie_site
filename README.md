@@ -11,6 +11,7 @@ My personal corner of the internet — a cyberpunk tavern for projects, experime
 - Neon Snake, with keyboard controls, automatic pausing, and session restoration when switching pages
 - An About page featuring my background, projects, interests, and social links
 - Static deployment to GitHub Pages through GitHub Actions
+- Versioned WebP backgrounds, a high-priority homepage preload, and idle prefetching of the next scene
 
 Work and Logs currently display placeholder content. Snake sessions are kept in memory and reset on a browser refresh.
 
@@ -41,6 +42,10 @@ pnpm check    # Type checks, unit tests, and architecture checks
 pnpm build    # Generate the production site in dist/
 pnpm preview  # Preview the production build locally
 ```
+
+Background PNG originals are retained in `public/assets/`. Run `pnpm optimize:backgrounds` to generate high-quality WebP copies with content-hashed filenames. If generated names change, update `src/config/site.ts` and the homepage preload in `index.html`. Image conversion is a development task, not part of every production build.
+
+Next-scene prefetch waits for the current background to load and is skipped when the browser reports data-saving mode or a 2G connection. Browser HTTP caching still follows the hosting server's cache headers; no service worker is installed.
 
 ## Future Work
 
