@@ -5,7 +5,7 @@ import path from 'node:path'
 import sharp from 'sharp'
 
 const sources = [
-  'assets/home/home-bg.png',
+  'assets/home/home-bg-ramen-sign.png',
   'assets/pages/work-bg-v2.png',
   'assets/pages/play-bg.png',
   'assets/pages/logs-bg-v2.png',

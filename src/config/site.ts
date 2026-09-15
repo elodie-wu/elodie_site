@@ -4,7 +4,7 @@ export const siteConfig = {
   logo: 'assets/home/logo-ew.png',
   backgroundAudio: 'assets/audio/rain.mp4',
   backgrounds: {
-    home: 'assets/home/home-bg-f8736b5b56.webp',
+    home: 'assets/home/home-bg-ramen-sign-46be03e78e.webp',
     work: 'assets/pages/work-bg-v2-4c458778f0.webp',
     play: 'assets/pages/play-bg-3902b9eea8.webp',
     logs: 'assets/pages/logs-bg-v2-800c3fc92d.webp',
