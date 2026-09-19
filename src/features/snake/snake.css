@@ -1,12 +1,16 @@
 .snake-game {
+  --snake-blue: #69b9ff;
+  --snake-blue-rgb: 105, 185, 255;
+  --snake-pink: #f46fc2;
+  --snake-pink-rgb: 244, 111, 194;
   margin: 0;
   padding: clamp(18px, 2.4vw, 30px);
   color: #f8f4ff;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(var(--snake-blue-rgb), 0.46);
   border-radius: 17px;
-  background: rgba(3, 7, 16, 0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(3, 7, 16, 0.18);
+  backdrop-filter: blur(14px) saturate(1.12);
 }
 
 .snake-game-header {
@@ -19,7 +23,7 @@
 
 .snake-game-header .mono-label {
   margin: 0 0 7px;
-  color: rgba(var(--color-cyan-rgb), 0.78);
+  color: rgba(var(--snake-blue-rgb), 0.9);
   font-size: clamp(0.52rem, 0.7vw, 0.66rem);
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -40,7 +44,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 13px;
-  border: 1px solid rgba(var(--color-cyan-rgb), 0.2);
+  border: 1px solid rgba(var(--snake-blue-rgb), 0.42);
   color: rgba(255, 255, 255, 0.76);
   background: rgba(4, 9, 20, 0.76);
   font-size: 0.65rem;
@@ -52,8 +56,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--color-cyan);
-  box-shadow: 0 0 10px var(--color-cyan);
+  background: var(--snake-blue);
+  box-shadow: 0 0 10px var(--snake-blue);
 }
 
 .snake-live-status[data-status="paused"] i {
@@ -92,7 +96,7 @@
   width: min(100%, 660px);
   aspect-ratio: 1;
   overflow: hidden;
-  border: 1px solid rgba(var(--color-cyan-rgb), 0.32);
+  border: 1px solid rgba(var(--snake-blue-rgb), 0.72);
   background:
     radial-gradient(
       circle at 50% 45%,
@@ -101,7 +105,8 @@
     ),
     #030711;
   box-shadow:
-    inset 0 0 42px rgba(12, 110, 131, 0.1),
+    inset 0 0 42px rgba(var(--snake-blue-rgb), 0.12),
+    0 0 18px rgba(var(--snake-blue-rgb), 0.16),
     0 0 30px rgba(0, 0, 0, 0.48);
 }
 
@@ -115,8 +120,8 @@
 }
 
 .snake-grid span {
-  border-right: 1px solid rgba(var(--color-cyan-rgb), 0.075);
-  border-bottom: 1px solid rgba(var(--color-cyan-rgb), 0.075);
+  border-right: 1px solid rgba(var(--snake-blue-rgb), 0.11);
+  border-bottom: 1px solid rgba(var(--snake-blue-rgb), 0.11);
 }
 
 .snake-grid span:nth-child(20n) {
@@ -135,23 +140,23 @@
   position: relative;
   z-index: 2;
   margin: 8%;
-  border: 1px solid rgba(230, 244, 225, 0.7);
+  border: 1px solid rgba(255, 215, 244, 0.78);
   border-radius: 27%;
-  background: #9eb99a;
+  background: var(--snake-pink);
   box-shadow:
     inset 0 0 6px rgba(255, 255, 255, 0.36),
-    0 0 8px rgba(158, 185, 154, 0.88),
-    0 0 16px rgba(var(--color-neon-pink-rgb), 0.45);
+    0 0 8px rgba(var(--snake-pink-rgb), 0.92),
+    0 0 18px rgba(var(--snake-pink-rgb), 0.52);
 }
 
 .snake-head {
   z-index: 3;
-  border-color: #ecf7e8;
-  background: #bad3b5;
+  border-color: #ffe0f5;
+  background: #ff91d5;
   box-shadow:
     inset 0 0 7px rgba(255, 255, 255, 0.52),
-    0 0 10px #9eb99a,
-    0 0 22px rgba(var(--color-neon-pink-rgb), 0.66);
+    0 0 10px var(--snake-pink),
+    0 0 24px rgba(var(--snake-pink-rgb), 0.74);
 }
 
 .snake-head i {
@@ -244,8 +249,8 @@
 .snake-start-button {
   min-width: 170px;
   min-height: 52px;
-  border: 2px solid var(--color-neon-pink);
-  color: var(--color-cyan);
+  border: 2px solid var(--snake-blue);
+  color: #dceeff;
   background: rgba(4, 7, 17, 0.12);
   font: inherit;
   font-size: clamp(0.72rem, 1.2vw, 0.94rem);
@@ -254,10 +259,10 @@
   text-transform: uppercase;
   cursor: pointer;
   box-shadow:
-    inset 0 0 15px rgba(var(--color-neon-pink-rgb), 0.07),
-    0 0 8px var(--color-neon-pink),
-    0 0 24px rgba(var(--color-neon-pink-rgb), 0.72);
-  text-shadow: 0 0 9px rgba(var(--color-cyan-rgb), 0.95);
+    inset 0 0 15px rgba(var(--snake-blue-rgb), 0.08),
+    0 0 8px var(--snake-blue),
+    0 0 24px rgba(var(--snake-blue-rgb), 0.6);
+  text-shadow: 0 0 9px rgba(var(--snake-blue-rgb), 0.95);
   transition:
     transform 0.18s ease,
     background 0.18s ease,
@@ -269,9 +274,9 @@
   transform: translateY(-2px);
   background: rgba(var(--color-cyan-rgb), 0.05);
   box-shadow:
-    inset 0 0 18px rgba(var(--color-cyan-rgb), 0.08),
-    0 0 10px var(--color-cyan),
-    0 0 34px rgba(var(--color-neon-pink-rgb), 0.9);
+    inset 0 0 18px rgba(var(--snake-blue-rgb), 0.1),
+    0 0 10px var(--snake-blue),
+    0 0 34px rgba(var(--snake-blue-rgb), 0.82);
 }
 
 .snake-console {
@@ -281,9 +286,9 @@
 
 .snake-score-card,
 .snake-console-card {
-  border: 1px solid rgba(var(--color-cyan-rgb), 0.18);
-  background: rgba(3, 8, 18, 0.78);
-  box-shadow: inset 0 0 25px rgba(var(--color-cyan-rgb), 0.025);
+  border: 1px solid rgba(var(--snake-blue-rgb), 0.36);
+  background: rgba(3, 8, 18, 0.2);
+  box-shadow: inset 0 0 25px rgba(var(--snake-blue-rgb), 0.04);
 }
 
 .snake-score-card {
@@ -294,7 +299,7 @@
 
 .snake-score-card span,
 .snake-console-card > span {
-  color: rgba(var(--color-cyan-rgb), 0.68);
+  color: rgba(var(--snake-blue-rgb), 0.82);
   font-size: 0.56rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -339,12 +344,12 @@
   display: grid;
   place-items: center;
   min-height: 34px;
-  border: 1px solid rgba(var(--color-neon-pink-rgb), 0.48);
-  color: var(--color-soft-pink);
-  background: rgba(var(--color-neon-pink-rgb), 0.06);
+  border: 1px solid rgba(var(--snake-blue-rgb), 0.48);
+  color: #dceeff;
+  background: rgba(var(--snake-blue-rgb), 0.07);
   font: inherit;
   font-size: 0.62rem;
-  box-shadow: inset 0 -3px 0 rgba(var(--color-neon-pink-rgb), 0.12);
+  box-shadow: inset 0 -3px 0 rgba(var(--snake-blue-rgb), 0.13);
 }
 
 .snake-space-key {

@@ -28,13 +28,13 @@
   display: block;
   width: clamp(48px, 4.3vw, 66px);
   height: auto;
-  filter: drop-shadow(0 0 7px rgba(var(--color-magenta-rgb), 0.5));
+  filter: drop-shadow(0 0 7px rgba(157, 220, 255, 0.58));
   transition: filter 240ms ease, transform 240ms ease;
 }
 
 .brand:hover .brand-logo {
-  filter: drop-shadow(0 0 5px var(--color-magenta))
-    drop-shadow(0 0 14px rgba(var(--color-magenta-rgb), 0.85));
+  filter: drop-shadow(0 0 5px #dff5ff)
+    drop-shadow(0 0 14px rgba(105, 185, 255, 0.88));
   transform: translateY(-1px);
 }
 

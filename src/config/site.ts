@@ -1,7 +1,7 @@
 /** Site-specific content and assets. Paths are relative to public/. */
 export const siteConfig = {
   name: 'Elodie Wu',
-  logo: 'assets/home/logo-ew-dreamcore.png',
+  logo: 'assets/home/logo-ew-ice.svg',
   backgroundAudio: 'assets/audio/rain.mp4',
   backgrounds: {
     home: 'assets/home/home-bunny-crt-hd.webp',

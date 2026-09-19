@@ -25,3 +25,15 @@ Create a high-resolution wide 16:9 website background in the same cinematic Y2K 
 ## EW ICON — Transparent pixel mark
 
 Create a clean high-resolution transparent PNG icon for the initials EW. Use a compact hand-drawn pixel-art monogram in icy cyan and pale periwinkle, with a single tiny soft-pink highlight pixel and a restrained blue glow. The E and W should connect into one recognizable mark with slightly imperfect retro CRT pixel edges. No frame, no circle, no extra words, no background, generous transparent padding, centered, legible at 48 pixels.
+
+## V3 revisions — edge composition and natural plush construction
+
+Built-in ImageGen mode was used for both final scene revisions.
+
+### PLAY — edge-safe gaming layout
+
+Rebuild the cozy midnight bedroom gaming scene as a 16:9 premium miniature set. Keep a complete seated lop-eared rabbit holding a wired controller entirely within the far-left 0–17% of the canvas, place the complete CRT computer only in the far-right 82–100%, and reserve the middle 64% as quiet dark negative space for a translucent UI. Use cobalt CRT light, warm lamp contrast, realistic plush materials, and clean rounded paws. Avoid cropped subjects, central objects, extra limbs, warped faces, text, logos, and watermarks.
+
+### ABOUT — natural-fur phone booth scene
+
+Create a 16:9 rainy old-city night street with a classic red glass phone booth entirely in the far-right 78–99% and open atmosphere across the left 72%. A soft beige lop-eared plush rabbit in a green gingham dress sits inside, holding a yellow receiver to its head with one short rounded plush arm and paw while the other paw rests on its lap. Use natural random fluffy fibers, a simple face with two bead eyes and a small brown nose, and physically believable anatomy. Avoid human fingers, extra limbs, merged cord/arm, engraved or quilted fur, text, logos, and watermarks.

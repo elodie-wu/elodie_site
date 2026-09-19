@@ -30,7 +30,7 @@ export const workProjects: readonly WorkProject[] = [
     tags: ['React', 'TypeScript', 'Vite', 'Motion'],
     image: 'assets/home/home-bunny-crt-hd.webp',
     imageAlt: 'A plush rabbit sitting beside a glowing CRT in a field at night',
-    href: 'https://www.elodiewu.com',
+    href: 'https://github.com/elodie-wu/elodie_site',
   },
   {
     id: 'stock-prediction',

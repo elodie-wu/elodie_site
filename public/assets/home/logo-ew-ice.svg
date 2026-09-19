@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 56" role="img" aria-label="EW">
+  <defs>
+    <filter id="ice-glow" x="-50%" y="-60%" width="200%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="#a8ddff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#ice-glow)">
+    <path d="M28 10H10v36h20M10 28h15"/>
+    <path d="M31 11l5 35 10-21 9 21 7-35"/>
+    <path d="M8 49h56" opacity=".72"/>
+  </g>
+</svg>

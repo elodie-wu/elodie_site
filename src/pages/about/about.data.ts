@@ -34,8 +34,8 @@ export const projects: readonly AboutProject[] = [
     title: 'Personal Website',
     description:
       'A React + .NET portfolio website with backend and admin features — the little corner of the internet you are visiting now.',
-    href: 'https://www.elodiewu.com',
-    linkLabel: 'View website',
+    href: 'https://github.com/elodie-wu/elodie_site',
+    linkLabel: 'View repository',
   },
   {
     icon: '📈',
