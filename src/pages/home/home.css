@@ -1,7 +1,7 @@
 .landing-home {
   --landing-background: none;
-  --home-background-brightness: 1.2;
-  --home-background-saturation: 1.08;
+  --home-background-brightness: 1.02;
+  --home-background-saturation: 1.04;
   isolation: isolate;
   position: relative;
   min-height: 100vh;
@@ -39,20 +39,23 @@
 .landing-home-shade {
   position: absolute;
   z-index: -1;
-  inset: 23% 11%;
+  left: 5%;
+  top: 20%;
+  width: min(58vw, 980px);
+  height: 64%;
   border-radius: 50%;
   pointer-events: none;
-  background: rgba(4, 3, 13, 0.2);
+  background: rgba(3, 9, 20, 0.3);
   filter: blur(60px);
 }
 
 .landing-home-content {
   position: relative;
   z-index: 2;
-  width: min(100%, 1180px);
+  width: min(100%, 1440px);
   display: grid;
-  justify-items: center;
-  text-align: center;
+  justify-items: start;
+  text-align: left;
   transform: translateY(-1vh);
 }
 
@@ -76,12 +79,12 @@
 }
 
 .landing-home-title:hover {
-  color: #f7d7f3;
+  color: #f3f8ff;
   filter: brightness(1.1);
   text-shadow:
     0 3px 18px rgba(0, 0, 0, 0.9),
     0 0 5px var(--color-soft-pink),
-    0 0 14px var(--color-magenta),
+    0 0 14px var(--color-blue),
     0 0 32px rgba(var(--color-magenta-rgb), 0.95),
     0 0 64px rgba(var(--color-magenta-rgb), 0.6);
 }
@@ -170,7 +173,7 @@
   transform: translateY(-2px);
   box-shadow:
     inset 0 0 18px rgba(var(--color-cyan-rgb), 0.05),
-    0 0 10px #ef71df,
+    0 0 10px var(--color-cyan),
     0 0 30px rgba(var(--color-neon-pink-rgb), 0.95),
     0 0 58px rgba(var(--color-magenta-rgb), 0.58);
 }
@@ -193,6 +196,16 @@
 }
 
 @media (max-width: 700px) {
+  .landing-home-shade {
+    left: 6%;
+    width: 88%;
+  }
+
+  .landing-home-content {
+    justify-items: center;
+    text-align: center;
+  }
+
   .landing-home-tagline {
     font-size: 0.7rem;
     line-height: 1.75;

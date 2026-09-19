@@ -48,7 +48,7 @@ describe('background prefetch lifecycle', () => {
     expect(TestImage.instances).toHaveLength(1)
     idle.mock.calls[0][0]()
     expect(TestImage.instances).toHaveLength(2)
-    expect(TestImage.instances[1].src).toContain('work-bg-v2-')
+    expect(TestImage.instances[1].src).toContain('work-bunny-coding.webp')
     expect(TestImage.instances[1].fetchPriority).toBe('low')
   })
   it('cancels scheduled work when the route is unmounted', () => {

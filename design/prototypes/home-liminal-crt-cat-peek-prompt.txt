@@ -1,0 +1,10 @@
+Mode: built-in imagegen
+Use case: precise-object-edit
+
+Use the existing liminal CRT homepage prototype as the exact base. Add one small original low-poly cat mascot peeking curiously from behind the CRT monitor on the right, and change nothing else.
+
+The cat is cream-colored with lavender ear tips, teal oval eyes, tiny star-shaped cheek markings and a subtle navy collar. Show only its head, triangular ears, eyes and two small front paws. The CRT must occlude the rest of the character. Let the paws rest on the back/top edge while the head appears just above and slightly to the right of the casing.
+
+Match the early-2000s faceted low-poly style, low-resolution texture, VHS grain, chromatic fringe, dark-blue ambient light and cold screen glow. Keep the mascot smaller than the CRT and do not cover the screen, indicator light or website UI.
+
+Preserve the sky, stars, horizon, grass, fireflies, CRT, screen image, lighting, logo, navigation, hero copy, button, scroll cue, typography, spacing and overall composition. Add no other characters, body, clothing, phone, text or watermark.

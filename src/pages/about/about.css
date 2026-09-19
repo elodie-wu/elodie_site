@@ -51,7 +51,7 @@
   background:
     radial-gradient(
       circle at 88% 8%,
-      rgba(var(--color-neon-pink-rgb), 0.17),
+      rgba(var(--color-blue-rgb), 0.17),
       transparent 34%
     ),
     radial-gradient(circle at 4% 100%, rgba(var(--color-cyan-rgb), 0.1), transparent 38%);
@@ -69,14 +69,14 @@
 
 .about-intro h1 {
   margin: 16px 0 0;
-  color: #f8d9ff;
+  color: #f1f6ee;
   font-size: clamp(2rem, 5.2vw, 4.8rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0.035em;
   text-transform: lowercase;
   text-shadow:
-    0 0 12px rgba(239, 113, 223, 0.36),
+    0 0 12px rgba(var(--color-blue-rgb), 0.36),
     0 0 34px rgba(var(--color-magenta-rgb), 0.34);
 }
 
@@ -131,8 +131,8 @@
 
 .about-socials a:hover,
 .about-socials a:focus-visible {
-  border-color: #ef71df;
-  color: #ffc2f7;
+  border-color: var(--color-neon-pink);
+  color: #eff7e9;
   box-shadow:
     0 0 18px rgba(var(--color-neon-pink-rgb), 0.42),
     inset 0 0 16px rgba(var(--color-neon-pink-rgb), 0.08);
@@ -204,7 +204,7 @@
 
 .about-project h3 {
   margin: 1px 0 0;
-  color: #f3d6ff;
+  color: #edf3e8;
   font-size: clamp(0.68rem, 0.88vw, 0.8rem);
   font-weight: 400;
   line-height: 1.5;
@@ -229,8 +229,8 @@
 
 .about-project > a:hover,
 .about-project > a:focus-visible {
-  color: #ff9ded;
-  text-shadow: 0 0 12px rgba(239, 113, 223, 0.68);
+  color: #eff7e9;
+  text-shadow: 0 0 12px rgba(var(--color-neon-pink-rgb), 0.68);
 }
 
 .about-tags,

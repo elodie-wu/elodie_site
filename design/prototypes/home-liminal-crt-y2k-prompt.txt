@@ -1,0 +1,12 @@
+Mode: built-in imagegen
+Use case: ui-mockup
+
+Design a high-fidelity 16:9 desktop homepage prototype for Elodie Wu's developer portfolio. Preserve the current website hierarchy: EW at top left; WORK, PLAY, LOGS, ABOUT at top right; ELODIE WU, SOFTWARE ENGINEER, the existing tagline, one CTA and a scroll cue.
+
+Set the page in an enormous empty grass field at deep-blue twilight beneath a smooth star-speckled sky. Place one late-1990s beige CRT monitor in the grass on the right third, casting icy blue light on wet grass; its screen shows white clouds and faint analog static. Use low-fi 1999 camcorder photography, VHS grain, chromatic fringe, subtle scanlines and slightly underexposed colors.
+
+Place the hero copy left of center with generous negative space. Use restrained icy-white Y2K display lettering and readable pixel/monospace support text. CTA: a thin unfilled translucent computer-UI outline reading ENTER THE SIGNAL.
+
+Exact text: EW; WORK; PLAY; LOGS; ABOUT; ELODIE WU; SOFTWARE ENGINEER; BUILDING SYSTEMS, STORIES AND STRANGE LITTLE WORLDS.; ENTER THE SIGNAL; ↓ SCROLL TO EXPLORE.
+
+Avoid bright flowers, floating fish, sunlit rooms, cyberpunk bars, cities, people, extra monitors, dashboards, browser chrome, phone frames, watermarks and illegible text.

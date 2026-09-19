@@ -108,7 +108,7 @@ export function SnakeGame() {
             <span>Objective</span>
             <ol>
               <li>Collect the random emoji food.</li>
-              <li>Each snack grows the pink snake.</li>
+              <li>Each snack grows the signal trail.</li>
               <li>Walls turn the snake; avoid your own trail.</li>
             </ol>
           </div>

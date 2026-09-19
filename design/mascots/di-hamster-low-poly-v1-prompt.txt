@@ -1,0 +1,10 @@
+Mode: built-in imagegen
+Use case: stylized-concept
+
+Create an original recurring hamster mascot for Elodie Wu's developer portfolio as an authentic early-2000s low-poly 3D game character. Use the supplied low-poly animal image only as a style/proportion reference and use the supplied personal photographs for design cues rather than reproducing a human face.
+
+Design a small round golden-cream hamster with a cream muzzle and belly, warm chestnut fur shaped like a short asymmetrical bob with side bangs, one silver double hair clip, large calm almond-shaped dark eyes, tiny pink nose, round dusty-pink ears and small paws. Dress it in an oversized black crewneck with subtle white hand-drawn stitches, a delicate silver chain with a key pendant and one muted-aqua bracelet accent.
+
+Use visible polygon facets, simple flat-shaded geometry, low-resolution hand-painted textures and restrained highlights. It must look like a 2001 console-game model, not plush, clay, fur simulation or smooth modern animation.
+
+Present the same consistent character on a muted periwinkle-lavender studio background: a large central three-quarter full-body view, smaller front and side/back views, and three head expressions—neutral, shy smile and curious surprise. No text labels, props, room, logos, watermark, additional characters or copied game mascots.

@@ -1,14 +1,14 @@
 /** Site-specific content and assets. Paths are relative to public/. */
 export const siteConfig = {
   name: 'Elodie Wu',
-  logo: 'assets/home/logo-ew.png',
+  logo: 'assets/home/logo-ew-dreamcore.png',
   backgroundAudio: 'assets/audio/rain.mp4',
   backgrounds: {
-    home: 'assets/home/home-bg-ramen-sign-46be03e78e.webp',
-    work: 'assets/pages/work-bg-v2-4c458778f0.webp',
-    play: 'assets/pages/play-bg-3902b9eea8.webp',
-    logs: 'assets/pages/logs-bg-v2-800c3fc92d.webp',
-    about: 'assets/pages/about-bg-v2-0876b542d5.webp',
+    home: 'assets/home/home-bunny-crt-hd.webp',
+    work: 'assets/pages/work-bunny-coding.webp',
+    play: 'assets/pages/play-bunny-gaming.webp',
+    logs: 'assets/pages/logs-bunny-reading.webp',
+    about: 'assets/pages/about-bunny-red-city-booth.webp',
   },
   socialLinks: [
     { label: 'GitHub', href: 'https://github.com/elodie-wu' },

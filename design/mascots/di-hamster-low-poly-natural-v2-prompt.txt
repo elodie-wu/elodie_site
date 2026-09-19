@@ -1,0 +1,10 @@
+Mode: built-in imagegen
+Use case: stylized-concept
+
+Redesign the website mascot as a much less anthropomorphic, naturally proportioned tricolor hamster in an early-2000s low-poly console-game style. Use the earlier mascot only for rendering quality and calm personality; remove the human hairstyle, outfit, jewelry, bipedal pose and human anatomy.
+
+Use a believable compact hamster body on four short paws, rounded back, natural cheek pouches, small ears, tiny pink nose, fine whiskers and almost invisible tail. Create a distinctive asymmetrical black, honey-gold and cream-white coat: white muzzle, chest, belly and front paws; golden sides and rump; a black cap across the head and one ear, a dark patch around one eye and an irregular black saddle across part of the back. Keep these markings consistent.
+
+Use obvious faceted polygon geometry, flat-shaded planes and low-resolution hand-painted texture. It should resemble a 1999–2002 console-game model—not photorealistic fur, plush, clay or smooth modern CGI.
+
+Present the same hamster on a muted periwinkle-blue background: a large central three-quarter view, front view, side view, rear three-quarter view, plus natural grooming, holding a sunflower seed and peeking over an edge. No clothes, jewelry, hair, accessories, human posture, text, logos, additional characters or watermark.

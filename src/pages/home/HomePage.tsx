@@ -25,7 +25,7 @@ export function HomePage() {
           strange little worlds.
         </p>
         <Link className="landing-home-enter" to="/play">
-          ENTER THE TAVERN
+          ENTER THE SIGNAL
         </Link>
         <Link
           className="landing-home-scroll"
