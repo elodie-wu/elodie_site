@@ -1,5 +1,6 @@
 export interface SiteLog {
   readonly id: string
+  readonly icon: string
   readonly title: string
   readonly type: string
   readonly date: string
@@ -10,6 +11,7 @@ export interface SiteLog {
 export const siteLogs: readonly SiteLog[] = [
   {
     id: 'quiet-signal',
+    icon: '🌙',
     title: 'A quieter signal',
     type: 'Design notes',
     date: '2026.09.19',
@@ -22,6 +24,7 @@ export const siteLogs: readonly SiteLog[] = [
   },
   {
     id: 'architecture-pass',
+    icon: '🧩',
     title: 'The site learned to breathe',
     type: 'Build log',
     date: '2026.09.16',
@@ -34,6 +37,7 @@ export const siteLogs: readonly SiteLog[] = [
   },
   {
     id: 'snake-signal',
+    icon: '🐍',
     title: 'Snake in the signal',
     type: 'Experiment',
     date: '2026.09.12',
@@ -46,6 +50,7 @@ export const siteLogs: readonly SiteLog[] = [
   },
   {
     id: 'first-transmission',
+    icon: '📡',
     title: 'First transmission',
     type: 'Release',
     date: '2026.09.01',

@@ -106,6 +106,9 @@
 .logs-detail-meta time { color: rgba(245, 248, 244, 0.48); }
 
 .logs-list-item strong {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #f1f6ee;
   font-size: clamp(0.74rem, 1vw, 0.9rem);
   font-weight: 400;
@@ -139,6 +142,9 @@
 }
 
 .logs-detail h2 {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(12px, 1.5vw, 20px);
   max-width: 14ch;
   margin: clamp(24px, 4vw, 52px) 0 0;
   color: #f5f8f2;
@@ -148,6 +154,14 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
   text-shadow: 0 0 28px rgba(var(--color-blue-rgb), 0.22);
+}
+
+.logs-title-icon {
+  flex: 0 0 auto;
+  font-family: system-ui, sans-serif;
+  font-size: 0.82em;
+  line-height: 1.15;
+  filter: drop-shadow(0 0 9px rgba(var(--color-cyan-rgb), 0.36));
 }
 
 .logs-detail-intro {

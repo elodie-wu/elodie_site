@@ -1,69 +1,46 @@
-# ElodieWu
+# 🌙 ElodieWu
 
-My personal corner of the internet — a cyberpunk tavern for projects, experiments, notes, and small games.
+A dreamcore portfolio built with React, TypeScript, and Vite.
 
 [Visit the website](https://elodiewu.com)
 
-## Current Features
+## ✨ Features
 
-- Responsive, pixel-art cyberpunk scenes with neon effects and ambient rain audio
-- Home / Work / Play / Logs / About navigation with scroll-based scene transitions
-- Neon Snake, with keyboard controls, automatic pausing, and session restoration when switching pages
-- An About page featuring my background, projects, interests, and social links
-- Static deployment to GitHub Pages through GitHub Actions
-- Versioned WebP backgrounds, a high-priority homepage preload, and idle prefetching of the next scene
+- 🐇 Five responsive rabbit scenes: Home, Work, Play, Logs, and About
+- 🪟 Paginated project and log views with translucent glass panels
+- 🎮 A playable neon Snake game with keyboard controls and session restoration
+- 🌠 Subtle stars, meteors, fireflies, and optional ambient music
+- 🚀 Static deployment to GitHub Pages
 
-Work and Logs currently display placeholder content. Snake sessions are kept in memory and reset on a browser refresh.
+## 🛠️ Development
 
-## Tech Stack
-
-- React + React Router
-- TypeScript
-- Vite
-- Plain CSS with shared design tokens and page/component styles
-- SonyCam Original pixel font
-- Vitest
-- pnpm
-- GitHub Actions + GitHub Pages
-
-## Local Development
-
-Use Node.js 22 and pnpm 11.22.0.
+Use Node.js 22 and pnpm 11.
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open the address printed by the development server.
+Useful checks:
 
 ```sh
-pnpm check    # Type checks, unit tests, and architecture checks
-pnpm build    # Generate the production site in dist/
-pnpm preview  # Preview the production build locally
+pnpm check
+pnpm build
+pnpm preview
 ```
 
-Background PNG originals are retained in `public/assets/`. Run `pnpm optimize:backgrounds` to generate high-quality WebP copies with content-hashed filenames. If generated names change, update `src/config/site.ts` and the homepage preload in `index.html`. Image conversion is a development task, not part of every production build.
+## 🗂️ Project layout
 
-Next-scene prefetch waits for the current background to load and is skipped when the browser reports data-saving mode or a 2G connection. Browser HTTP caching still follows the hosting server's cache headers; no service worker is installed.
+- `src/app/` — routing, layout, navigation, and scene transitions
+- `src/pages/` — page-specific content and presentation
+- `src/features/` — Snake and background-audio features
+- `src/components/` — reusable scene and UI components
+- `src/styles/` — reset, tokens, and global styles
+- `public/assets/` — only assets used by the deployed website
+- `design/prototypes/` — current high-resolution scene masters and their prompt notes
 
-## Future Work
+Runtime asset paths and page order are centralized in `src/config/site.ts`. The `public/` directory intentionally contains only deployable assets; replaced concepts and legacy games are not kept in the application repository.
 
-- Expand Work into project pages with dates, tags, and search
-- Turn Logs into a website changelog and technical blog
-- Improve game interactions, animations, and mobile controls
-- Explore bringing Shell Stack back alongside Snake
-- Build a .NET backend for content and admin management
-- Add a database, authentication, and comments
-- Explore Azure hosting, backend CI/CD, and monitoring
-- Add an online game leaderboard
+## 🚀 Deployment
 
-## Notes
-
-This version is a static frontend. Backend services, a database, authentication, an admin dashboard, and an online leaderboard are not implemented yet.
-
-Built by one human and several very opinionated AI agents.
-
-## Deployment
-
-The GitHub Pages workflow runs checks, builds the site, and deploys `dist/` on pushes to `main`. The custom domain is configured as [elodiewu.com](https://elodiewu.com).
+The GitHub Pages workflow runs checks and builds the site on pushes to `main`. The custom domain is configured by `public/CNAME`.

@@ -17,8 +17,8 @@ export const workProjects: readonly WorkProject[] = [
     description:
       'A research collection spanning water-quality anomaly detection, salmon health classification with Grad-CAM, and sea-turtle detection with YOLO.',
     tags: ['Python', 'PyTorch', 'YOLO', 'Grad-CAM'],
-    image: 'assets/pages/work-bunny-coding.webp',
-    imageAlt: 'A plush rabbit writing code at a computer',
+    image: 'assets/projects/aquaculture-sea-turtle.webp',
+    imageAlt: 'A sea turtle detected by a computer-vision model with a confidence score',
     href: 'https://github.com/elodie-wu/ai-aquaculture-research-demos',
   },
   {
@@ -39,8 +39,8 @@ export const workProjects: readonly WorkProject[] = [
     description:
       'An exploration of stock-price prediction with supervised learning and a compact Q-learning trading agent.',
     tags: ['Python', 'ML', 'Q-Learning', 'Data'],
-    image: 'assets/pages/play-bunny-gaming.webp',
-    imageAlt: 'A plush rabbit playing a game beside a CRT monitor',
+    image: 'assets/projects/stock-trading-comparison.webp',
+    imageAlt: 'A chart comparing reinforcement-learning, buy-and-hold, and random trading strategies',
     href: 'https://github.com/elodie-wu/ai-stock-price-prediction',
   },
 ]

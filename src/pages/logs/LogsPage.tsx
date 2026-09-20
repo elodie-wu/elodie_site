@@ -44,7 +44,10 @@ export function LogsPage() {
                 aria-pressed={entry.id === selectedLog.id}
               >
                 <span className="logs-list-meta"><span>{entry.type}</span><time>{entry.date}</time></span>
-                <strong>{entry.title}</strong>
+                <strong>
+                  <span className="logs-title-icon" aria-hidden="true">{entry.icon}</span>
+                  <span>{entry.title}</span>
+                </strong>
                 <span className="logs-list-intro">{entry.intro}</span>
                 <span className="logs-list-open">Read log <span aria-hidden="true">→</span></span>
               </button>
@@ -64,7 +67,10 @@ export function LogsPage() {
             <span>{selectedLog.type}</span>
             <time dateTime={selectedLog.date.replaceAll('.', '-')}>{selectedLog.date}</time>
           </div>
-          <h2>{selectedLog.title}</h2>
+          <h2>
+            <span className="logs-title-icon" aria-hidden="true">{selectedLog.icon}</span>
+            <span>{selectedLog.title}</span>
+          </h2>
           <p className="logs-detail-intro">{selectedLog.intro}</p>
           <div className="logs-detail-body">
             {selectedLog.content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

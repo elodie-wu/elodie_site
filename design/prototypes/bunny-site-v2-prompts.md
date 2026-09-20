@@ -37,3 +37,7 @@ Rebuild the cozy midnight bedroom gaming scene as a 16:9 premium miniature set. 
 ### ABOUT — natural-fur phone booth scene
 
 Create a 16:9 rainy old-city night street with a classic red glass phone booth entirely in the far-right 78–99% and open atmosphere across the left 72%. A soft beige lop-eared plush rabbit in a green gingham dress sits inside, holding a yellow receiver to its head with one short rounded plush arm and paw while the other paw rests on its lap. Use natural random fluffy fibers, a simple face with two bead eyes and a small brown nose, and physically believable anatomy. Avoid human fingers, extra limbs, merged cord/arm, engraved or quilted fur, text, logos, and watermarks.
+
+### PLAY V4 — small sofa
+
+Built-in ImageGen precise-object editing mode. Preserve the V3 gaming scene, rabbit position at the far-left edge, CRT at the far-right edge, quiet dark center, controller, cable, room, lighting, and 16:9 framing. Add only a compact low-backed dusty blue-gray loveseat directly underneath the rabbit so it sits comfortably on a softly upholstered seat instead of the floor. Keep the sofa entirely within the left portion of the canvas, with rounded arms, believable fabric texture, compressed cushions, and matching blue-violet CRT light. No blanket, no extra furniture, no text, logos, or watermarks.

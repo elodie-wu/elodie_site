@@ -2,7 +2,7 @@
 export const siteConfig = {
   name: 'Elodie Wu',
   logo: 'assets/home/logo-ew-ice.svg',
-  backgroundAudio: 'assets/audio/rain.mp4',
+  backgroundAudio: 'assets/audio/fading-memory-ambient.mp3',
   backgrounds: {
     home: 'assets/home/home-bunny-crt-hd.webp',
     work: 'assets/pages/work-bunny-coding.webp',

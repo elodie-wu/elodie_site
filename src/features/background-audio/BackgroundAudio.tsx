@@ -3,7 +3,7 @@ import { siteConfig } from '../../config/site'
 import { assetUrl } from '../../shared/lib/assetUrl'
 import './background-audio.css'
 
-/** Remains mounted in the shared header, so music continues across routes. */
+/** Remains mounted in the shared header, so ambient sound continues across routes. */
 export function BackgroundAudio() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -12,7 +12,7 @@ export function BackgroundAudio() {
     const audio = audioRef.current
     if (!audio) return
     if (!audio.paused) { audio.pause(); return }
-    audio.volume = 0.45
+    audio.volume = 0.22
     try { await audio.play() } catch { setIsPlaying(false) }
   }
 
@@ -21,9 +21,9 @@ export function BackgroundAudio() {
       <button
         type="button"
         className={`music-toggle${isPlaying ? ' music-toggle-active' : ''}`}
-        aria-label={isPlaying ? 'Turn background music off' : 'Turn background music on'}
+        aria-label={isPlaying ? 'Turn ambient sound off' : 'Turn ambient sound on'}
         aria-pressed={isPlaying}
-        title={isPlaying ? 'Music off' : 'Music on'}
+        title={isPlaying ? 'Ambient sound off' : 'Ambient sound on'}
         onClick={toggle}
       >
         <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -1,6 +1,6 @@
 /**
  * Lightweight static-import audit. No extra packages or browser required.
- * Tests and legacy are intentionally outside the runtime entry graph.
+ * Tests are intentionally outside the runtime entry graph.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -41,7 +41,6 @@ function visit(file) {
     const target = [base, base + '.ts', base + '.tsx', path.join(base, 'index.ts')]
       .find((candidate) => fs.existsSync(candidate) && fs.statSync(candidate).isFile())
     if (!target) { failures.push('Missing import ' + specifier + ' in ' + display(file)); continue }
-    if (display(target).startsWith('legacy/')) failures.push('Runtime imports archived code: ' + display(file))
     if (/\.(tsx?|css)$/.test(target)) visit(target)
   }
   stack.delete(file)
