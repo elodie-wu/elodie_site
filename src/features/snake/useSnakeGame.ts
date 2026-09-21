@@ -120,5 +120,15 @@ export function useSnakeGame() {
     })
   }, [])
 
-  return { gameRef, snake, food, score, status, direction, startGame }
+  return {
+    gameRef,
+    snake,
+    food,
+    score,
+    status,
+    direction,
+    startGame,
+    queueDirection,
+    togglePause,
+  }
 }

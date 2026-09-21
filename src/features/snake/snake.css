@@ -334,25 +334,78 @@
 
 .snake-key-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 6px;
   margin-top: 12px;
 }
 
-.snake-key-row kbd,
+.snake-control-key,
 .snake-space-key {
   display: grid;
   place-items: center;
-  min-height: 34px;
+  min-height: 40px;
+  padding: 0;
   border: 1px solid rgba(var(--snake-blue-rgb), 0.48);
+  border-radius: 2px;
   color: #dceeff;
   background: rgba(var(--snake-blue-rgb), 0.07);
   font: inherit;
   font-size: 0.62rem;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   box-shadow: inset 0 -3px 0 rgba(var(--snake-blue-rgb), 0.13);
+  transition: color 140ms ease, background 140ms ease, border-color 140ms ease,
+    box-shadow 140ms ease, transform 90ms ease;
+}
+
+.snake-control-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.snake-control-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.snake-control-down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.snake-control-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.snake-control-key:hover:not(:disabled),
+.snake-control-key:focus-visible,
+.snake-space-key:hover:not(:disabled),
+.snake-space-key:focus-visible,
+.snake-control-key[data-active="true"] {
+  border-color: rgba(var(--snake-blue-rgb), 0.9);
+  color: #ffffff;
+  background: rgba(var(--snake-blue-rgb), 0.18);
+  box-shadow:
+    inset 0 -2px 0 rgba(var(--snake-blue-rgb), 0.2),
+    0 0 12px rgba(var(--snake-blue-rgb), 0.28);
+}
+
+.snake-control-key:active:not(:disabled),
+.snake-space-key:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 8px rgba(var(--snake-blue-rgb), 0.22);
+}
+
+.snake-control-key:disabled,
+.snake-space-key:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
 }
 
 .snake-space-key {
+  width: 100%;
   margin-top: 12px;
   color: var(--color-cyan);
   letter-spacing: 0.12em;
@@ -412,6 +465,12 @@
 
   .snake-score-card {
     grid-row: auto;
+  }
+
+  .snake-control-key,
+  .snake-space-key {
+    min-height: 46px;
+    font-size: 0.72rem;
   }
 
   .snake-food {

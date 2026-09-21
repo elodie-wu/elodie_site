@@ -7,7 +7,17 @@ import './snake.css'
 const GRID_CELLS = Array.from({ length: BOARD_SIZE * BOARD_SIZE }, (_, index) => index)
 
 export function SnakeGame() {
-  const { gameRef, snake, food, score, status, direction, startGame } = useSnakeGame()
+  const {
+    gameRef,
+    snake,
+    food,
+    score,
+    status,
+    direction,
+    startGame,
+    queueDirection,
+    togglePause,
+  } = useSnakeGame()
 
   const statusLabel = {
     ready: 'Ready',
@@ -69,7 +79,7 @@ export function SnakeGame() {
             {status === 'paused' && (
               <div className="snake-board-overlay snake-pause-overlay" aria-live="polite">
                 <strong>Paused</strong>
-                <span>Press Space to continue</span>
+                <span>Press Space or tap Resume below</span>
               </div>
             )}
 
@@ -92,16 +102,62 @@ export function SnakeGame() {
 
           <div className="snake-console-card">
             <span>Movement</span>
-            <div className="snake-key-row" aria-label="W A S D and arrow keys">
-              <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+            <div className="snake-key-row" aria-label="Touch direction controls">
+              <button
+                className="snake-control-key snake-control-up"
+                type="button"
+                aria-label="Move up"
+                data-active={direction === 'up' ? 'true' : undefined}
+                disabled={status !== 'running'}
+                onClick={() => queueDirection('up')}
+              >
+                W
+              </button>
+              <button
+                className="snake-control-key snake-control-left"
+                type="button"
+                aria-label="Move left"
+                data-active={direction === 'left' ? 'true' : undefined}
+                disabled={status !== 'running'}
+                onClick={() => queueDirection('left')}
+              >
+                A
+              </button>
+              <button
+                className="snake-control-key snake-control-down"
+                type="button"
+                aria-label="Move down"
+                data-active={direction === 'down' ? 'true' : undefined}
+                disabled={status !== 'running'}
+                onClick={() => queueDirection('down')}
+              >
+                S
+              </button>
+              <button
+                className="snake-control-key snake-control-right"
+                type="button"
+                aria-label="Move right"
+                data-active={direction === 'right' ? 'true' : undefined}
+                disabled={status !== 'running'}
+                onClick={() => queueDirection('right')}
+              >
+                D
+              </button>
             </div>
-            <p>Use WASD or the arrow keys to steer.</p>
+            <p>Tap the controls or use WASD / arrow keys to steer.</p>
           </div>
 
           <div className="snake-console-card">
             <span>Pause protocol</span>
-            <div className="snake-space-key">Space</div>
-            <p>Space pauses or resumes. Leaving this page pauses the current run.</p>
+            <button
+              className="snake-space-key"
+              type="button"
+              disabled={status === 'ready' || status === 'game-over'}
+              onClick={togglePause}
+            >
+              {status === 'paused' ? 'Resume' : 'Space / Pause'}
+            </button>
+            <p>Tap the button or press Space. Leaving this page pauses the current run.</p>
           </div>
 
           <div className="snake-console-card snake-objective-card">
